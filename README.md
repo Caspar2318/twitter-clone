@@ -10,3 +10,15 @@ Initialise:
 
 npx create-next-app --typescript
 => Eslint "Yes" => tailwind "Yes" => src directory "No" => experimental app directory "No" => import alias ->press enter
+
+---
+
+Other packages to install:
+
+npm install react-icons
+
+---
+
+Steps:
+
+=> Layout: main pages layout and sidebar items, logo, icons
