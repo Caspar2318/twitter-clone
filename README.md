@@ -15,10 +15,14 @@ npx create-next-app --typescript
 
 Other packages to install:
 
-npm install react-icons
+npm install react-icons zustand
 
 ---
 
 Steps:
 
 => Layout: main pages layout and sidebar items, logo, icons
+
+=> login or sign up modal
+
+=>
