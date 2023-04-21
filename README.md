@@ -15,7 +15,9 @@ npx create-next-app --typescript
 
 Other packages to install:
 
-npm install react-icons zustand
+npm install react-icons zustand bcrypt next-auth @next-auth/prisma-adapter swr axios => npm install -D @types/bcrypt => npm install react-hot-toast
+
+=> npm install -D prisma => npx prisma init => write model format inside "shema.prisma" file and then run => npx prisma db push => to publish shema inside mongodb => npm install @prisma/client
 
 ---
 
@@ -25,4 +27,4 @@ Steps:
 
 => login or sign up modal
 
-=>
+=> link with prisma and mongodb and setup next auth, homepage can be public for everyone, but notification and profile page need to be login before open it. so click those two button to open login modal if there's no current user logged in.
