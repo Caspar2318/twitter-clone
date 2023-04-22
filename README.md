@@ -35,4 +35,4 @@ Steps:
 
 export const config = { api: { bodyParser: { sizeLimit: "5mb"}}};
 
-this also works for other object, just put this inside specific api function file as '/api/xxx.ts'
+this also works for other projects, just put this inside specific api function file as '/api/xxx.ts'
