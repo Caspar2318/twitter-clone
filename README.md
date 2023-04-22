@@ -15,7 +15,7 @@ npx create-next-app --typescript
 
 Other packages to install:
 
-npm install react-icons zustand bcrypt next-auth @next-auth/prisma-adapter swr axios => npm install -D @types/bcrypt => npm install react-hot-toast => npm install react-spinners date-fns
+npm install react-icons zustand bcrypt next-auth @next-auth/prisma-adapter swr axios => npm install -D @types/bcrypt => npm install react-hot-toast => npm install react-spinners date-fns react-dropzone
 
 => npm install -D prisma => npx prisma init => write model format inside "shema.prisma" file and then run => npx prisma db push => to publish shema inside mongodb => npm install @prisma/client
 
@@ -31,4 +31,8 @@ Steps:
 
 => Users and single user profile: 1.create pages and async function handler to find users and followersCount; 2. add hook as userUsers.ts and fetch users data, and also another hook as useSpecificUser.ts to get single user data; 3. add Avatar details and profile page(create "users" folder under "pages" to and "[userId].tsx" to show user profile);
 
-=> user to edit personal profile
+=> user to edit personal profile, add eidt modal to update name, username, bio and upload profile and cover images. to solve the problem met while uploading image file, the server will report 413 error as body limit exceed 1mb, to add following code inside "/api/edit.ts" as:
+
+export const config = { api: { bodyParser: { sizeLimit: "5mb"}}};
+
+this also works for other object, just put this inside specific api function file as '/api/xxx.ts'
