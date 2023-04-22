@@ -36,3 +36,5 @@ Steps:
 export const config = { api: { bodyParser: { sizeLimit: "5mb"}}};
 
 this also works for other projects, just put this inside specific api function file as '/api/xxx.ts'
+
+=> load posts and create post: 1.create posts api page; 2. create hook as usePosts.ts to get the user's posts referenced by userId; 3. build home page with login/register when no current user, and tweet function when has current user;

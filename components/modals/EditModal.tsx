@@ -26,17 +26,17 @@ const EditModal = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    setProfileImage(currentUser?.profileImage);
-    setCoverImage(currentUser?.coverImage);
-    setName(currentUser?.name);
-    setUsername(currentUser?.username);
-    setBio(currentUser?.bio);
+    setProfileImage(currentUser?.currentUser.profileImage);
+    setCoverImage(currentUser?.currentUser.coverImage);
+    setName(currentUser?.currentUser.name);
+    setUsername(currentUser?.currentUser.username);
+    setBio(currentUser?.currentUser.bio);
   }, [
-    currentUser?.profileImage,
-    currentUser?.coverImage,
-    currentUser?.name,
-    currentUser?.username,
-    currentUser?.bio,
+    currentUser?.currentUser.profileImage,
+    currentUser?.currentUser.coverImage,
+    currentUser?.currentUser.name,
+    currentUser?.currentUser.username,
+    currentUser?.currentUser.bio,
   ]);
 
   const onSubmit = useCallback(async () => {
@@ -56,7 +56,7 @@ const EditModal = () => {
       toast.success("Profile updated!");
       editModal.onClose();
     } catch (error) {
-      toast.error("Something went wrong.");
+      toast.error("Please do not leave name or username as empty.");
     } finally {
       setIsLoading(false);
     }
