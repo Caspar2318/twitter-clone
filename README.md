@@ -25,16 +25,22 @@ Steps:
 
 => Layout: main pages layout and sidebar items, logo, icons
 
-=> login or sign up modal
+=> Login or sign up modal
 
-=> link with prisma and mongodb and setup next auth, homepage can be public for everyone, but notification and profile page need to be login before open it. so click those two button to open login modal if there's no current user logged in.
+=> Link with prisma and mongodb and setup next auth, homepage can be public for everyone, but notification and profile page need to be login before open it. so click those two button to open login modal if there's no current user logged in.
 
 => Users and single user profile: 1.create pages and async function handler to find users and followersCount; 2. add hook as userUsers.ts and fetch users data, and also another hook as useSpecificUser.ts to get single user data; 3. add Avatar details and profile page(create "users" folder under "pages" to and "[userId].tsx" to show user profile);
 
-=> user to edit personal profile, add eidt modal to update name, username, bio and upload profile and cover images. to solve the problem met while uploading image file, the server will report 413 error as body limit exceed 1mb, to add following code inside "/api/edit.ts" as:
+=> User to edit personal profile, add eidt modal to update name, username, bio and upload profile and cover images. to solve the problem met while uploading image file, the server will report 413 error as body limit exceed 1mb, to add following code inside "/api/edit.ts" as:
 
 export const config = { api: { bodyParser: { sizeLimit: "5mb"}}};
 
 this also works for other projects, just put this inside specific api function file as '/api/xxx.ts'
 
-=> load posts and create post: 1.create posts api page; 2. create hook as usePosts.ts to get the user's posts referenced by userId; 3. build home page with login/register when no current user, and tweet function when has current user;
+=> Load posts and create post: 1.create posts api page; 2. create hook as usePosts.ts to get the user's posts referenced by userId; 3. build home page with login/register when no current user, and tweet function when has current user; 4. create post item / post card to show posts and implement like and comment UI, load posts globally and able to click the profile image to check user information
+
+=> Like and Follow function
+
+=> Comments
+
+=> Notification
