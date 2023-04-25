@@ -1,6 +1,6 @@
 # Social media practice as Twitter clone with Typescript, nextJs, prisma, mongoDB, nextAuth and deploy through vercel
 
-live address at:
+live address at: https://social-media-seven-sage.vercel.app/
 
 (Do not use project name with any words like twitter or other famous website's name while deploy through vercel, which will leads to the website be warned as fishing website.)
 
@@ -52,3 +52,7 @@ export const config = { api: { responseLimit: false, }};
 ---
 
 => Notification
+
+---
+
+deployed through Vercel

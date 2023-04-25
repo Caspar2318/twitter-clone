@@ -18,7 +18,7 @@ const LoginModal = () => {
 
     loginModal.onClose();
     registerModal.onOpen();
-  }, [registerModal, loginModal]);
+  }, [registerModal, loginModal, isLoading]);
 
   const onSubmit = useCallback(async () => {
     try {
