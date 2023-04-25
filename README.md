@@ -37,10 +37,18 @@ export const config = { api: { bodyParser: { sizeLimit: "5mb"}}};
 
 this also works for other projects, just put this inside specific api function file as '/api/xxx.ts'
 
+---
+
 => Load posts and create post: 1.create posts api page; 2. create hook as usePosts.ts to get the user's posts referenced by userId; 3. build home page with login/register when no current user, and tweet function when has current user; 4. create post item / post card to show posts and implement like and comment UI, load posts globally and able to click the profile image to check user information
 
 => Like and Follow function (met bug as not able to delete like and follow as the data is not passed through hook to api fetcher)
 
-=> Comments
+---
+
+=> Comments => inside /api/posts/[postId].ts file need to add following code to override 4mb API Routes body size limit:
+
+export const config = { api: { responseLimit: false, }};
+
+---
 
 => Notification
